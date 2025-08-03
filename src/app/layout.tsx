@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import TopPicksSection from "@/components/TopPicksSection";
 import Footer from "@/components/Footer";
+import MensShoesSection from "@/components/MensShoesSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
          <Header/>
          <TopPicksSection/>
+         <MensShoesSection/>
         {children}
         <Footer/>
       </body>

@@ -20,9 +20,9 @@ const TopPicksSection = () => {
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Nike</p>
-            <h2 className="text-md font-semibold text-gray-800">
+            <p className="text-md font-semibold text-gray-800">
               Nike Air Force 1 '07 Crater Casual Shoes
-            </h2>
+            </p>
             <p className="text-lg font-bold text-gray-900 mt-1">$110.00</p>
           </div>
         </div>
@@ -35,9 +35,9 @@ const TopPicksSection = () => {
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Adidas</p>
-            <h2 className="text-md font-semibold text-gray-800">
+            <p className="text-md font-semibold text-gray-800">
              Adidas Originals Colorblock Short-Sleeve
-            </h2>
+            </p>
             <p>T-Shirt</p>
             <p className="text-lg font-bold text-gray-900 mt-1">$45.00</p>
           </div>
@@ -51,9 +51,9 @@ const TopPicksSection = () => {
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Nike</p>
-            <h2 className="text-md font-semibold text-gray-800">
+            <p className="text-md font-semibold text-gray-800">
               Icon Clash Oversized Houndstooth Crop Top
-            </h2>
+            </p>
             <p className="text-lg font-bold text-gray-900 mt-1">$45.00</p>
           </div>
         </div>
@@ -66,12 +66,46 @@ const TopPicksSection = () => {
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Timberland</p>
-            <h2 className="text-md font-semibold text-gray-800">
+            <p className="text-md font-semibold text-gray-800">
               Timberland Large Logo Backpack
-            </h2>
+            </p>
             <p className="text-lg font-bold text-gray-900 mt-1">$65.00</p>
           </div>
         </div>
+        {/*  */}
+        <button className="rounded-full text-sm font-semibold hover:bg-black hover:text-white shadow border px-5 py-3">
+          SHOP BEST SELLERS
+        </button>
+      {/*  */}
+    <div className="relative w-fit">
+    <img
+      src="https://habitat-recreation.myshopify.com/cdn/shop/files/hotspot.webp?v=1652773519&width=2564"
+      alt=""
+      className="w-full h-auto"
+    />
+
+    {/* Elbow Hotspot */}
+    <button
+      className="absolute top-[36%] left-[44%] bg-red-600 w-8 h-8 rounded-full shadow-lg hover:scale-110 transition"
+      title="Elbow Hotspot"
+    >
+      <span className="relative flex h-full w-full items-center justify-center">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+        <span className="relative inline-flex h-4 w-4 rounded-full bg-white border border-red-600"></span>
+      </span>
+    </button>
+
+    {/* Thigh Hotspot */}
+    <button
+      className="absolute top-[62%] left-[32%] bg-red-600 w-8 h-8 rounded-full shadow-lg hover:scale-110 transition"
+      title="Thigh Hotspot"
+    >
+      <span className="relative flex h-full w-full items-center justify-center">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+        <span className="relative inline-flex h-4 w-4 rounded-full bg-white border border-red-600"></span>
+      </span>
+    </button>
+  </div>
       </div>
     </div>
   );
