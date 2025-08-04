@@ -106,8 +106,6 @@ export default function WomensOutfitSection() {
       </div>
 
       {/* Full Width Banner Image */}
-      import Image from "next/image";
-
 <div className="mt-6 relative left-0 w-full z-40">
   {/* Background Image */}
   <div className="relative w-full h-[500px]">

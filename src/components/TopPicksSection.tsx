@@ -49,7 +49,7 @@ const TopPicksSection = () => {
         </div>
         {/*  */}
         <div className="w-72">
-          <img
+          <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p15.jpg?v=1648532451&width=1200"
             alt="Product 2"
              width={288} // Tailwind w-72 = 288px
@@ -66,7 +66,7 @@ const TopPicksSection = () => {
         </div>
       {/*  */}
         <div className="w-72">
-          <img
+          <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p6.jpg?v=1648455950&width=1200"
             alt="Product 2"
             width={288} // Tailwind w-72 = 288px
