@@ -31,7 +31,7 @@ const Header = () => {
 
       {/* Navbar */}
       <header className="text-gray-600 body-font sticky top-0 z-50  bg-white shadow-md w-full">
-        <div className="container mx-auto flex flex-wrap items-center justify-between px-1 py-4">
+        <div className="container mx-auto flex flex-wrap items-center justify-between px-1 py-7">
           {/* Navigation Menu */}
           <nav className="hidden lg:flex flex-wrap text-gray-600 items-center text-base space-x-6">
             <Link href={'/'} className="cursor-pointer hover:text-red-500">Home</Link>

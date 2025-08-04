@@ -158,7 +158,7 @@ const Footer = () => {
               />
             </button>
           </div>
-        </div>
+         </div>
       </footer>
     </div>
   );
