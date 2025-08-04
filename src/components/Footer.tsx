@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -25,15 +26,17 @@ const Footer = () => {
           {/* Left Section: Logo + Text */}
           <div className="md:w-1/2">
             <div className="mb-6">
-              <img
-                src="https://habitat-recreation.myshopify.com/cdn/shop/files/logo-footer.png?v=1653466142&width=224"
-                alt="Habitat Footer Logo"
-                className="ml-2"
-              />
+              <Image
+              src="https://habitat-recreation.myshopify.com/cdn/shop/files/logo-footer.png?v=1653466142&width=224"
+              alt="Habitat Footer Logo"
+              width={224} // You must provide width
+              height={50} // Adjust height as needed
+              className="ml-2"
+            />
             </div>
 
             <p className="text-gray-400 ml-2 leading-relaxed">
-              Success isn't about the end result, it's about what you learn
+              Success isnt about the end result, its about what you learn
               along the way. <br />
               In a meat-eating world, wearing leather for shoes and clothes and
               even handbags, <br />
@@ -137,7 +140,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
             <button className="flex items-center gap-1 text-gray-500 text-sm px-3 py-1.5 border border-white rounded hover:bg-gray-800">
               English
-              <img
+              <Image
                 width="16"
                 height="16"
                 src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"
@@ -147,7 +150,7 @@ const Footer = () => {
 
             <button className="flex items-center gap-2 text-gray-500 text-sm px-3 py-1.5 border border-white rounded hover:bg-gray-800">
               United States (USD $)
-              <img
+              <Image
                 width="16"
                 height="16"
                 src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const TopPicksSection = () => {
@@ -13,25 +14,29 @@ const TopPicksSection = () => {
       {/* Image row */}
       <div className="flex flex-wrap justify-center gap-6 mt-10 px-4">
         <div className="w-72">
-          <img
-            className="w-full h-96 object-cover rounded-lg shadow-md"
+          <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p22-1.jpg?v=1648541970&width=596"
             alt="Product 1"
+            width={288} // matches w-72
+            height={384} // matches h-96
+            className="w-full h-96 object-cover rounded-lg shadow-md"
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Nike</p>
             <p className="text-md font-semibold text-gray-800">
-              Nike Air Force 1 '07 Crater Casual Shoes
+              Nike Air Force 1 07 Crater Casual Shoes
             </p>
             <p className="text-lg font-bold text-gray-900 mt-1">$110.00</p>
           </div>
         </div>
         {/*  */}
         <div className="w-72">
-          <img
-            className="w-72 h-96 object-cover rounded-lg shadow-md"
+          <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p16.jpg?v=1648537134&width=1020"
             alt="Product 2"
+            width={288} // Tailwind w-72 = 288px
+            height={384} // Tailwind h-96 = 384px
+            className="w-72 h-96 object-cover rounded-lg shadow-md"
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Adidas</p>
@@ -45,9 +50,11 @@ const TopPicksSection = () => {
         {/*  */}
         <div className="w-72">
           <img
-            className="w-72 h-96 object-cover rounded-lg shadow-md"
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p15.jpg?v=1648532451&width=1200"
             alt="Product 2"
+             width={288} // Tailwind w-72 = 288px
+            height={384} // Tailwind h-96 = 384px
+            className="w-72 h-96 object-cover rounded-lg shadow-md"
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Nike</p>
@@ -60,9 +67,11 @@ const TopPicksSection = () => {
       {/*  */}
         <div className="w-72">
           <img
-            className="w-72 h-96 object-cover rounded-lg shadow-md"
             src="https://habitat-recreation.myshopify.com/cdn/shop/products/p6.jpg?v=1648455950&width=1200"
             alt="Product 2"
+            width={288} // Tailwind w-72 = 288px
+            height={384} // Tailwind h-96 = 384px
+            className="w-72 h-96 object-cover rounded-lg shadow-md"
           />
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">Timberland</p>
@@ -78,11 +87,13 @@ const TopPicksSection = () => {
         </button>
       {/*  */}
     <div className="relative w-fit">
-    <img
-      src="https://habitat-recreation.myshopify.com/cdn/shop/files/hotspot.webp?v=1652773519&width=2564"
-      alt=""
-      className="w-full h-auto"
-    />
+      <Image
+        src="https://habitat-recreation.myshopify.com/cdn/shop/files/hotspot.webp?v=1652773519&width=2564"
+        alt=""
+        width={2564}
+        height={1443} // approximate height to maintain aspect ratio (auto)
+        className="w-full h-auto"
+      />
 
     {/* Elbow Hotspot */}
     <button

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -12,14 +13,14 @@ const Header = () => {
 
         <div className="flex space-x-2 absolute right-6 text-white items-center">
           <p>ENGLISH</p>
-          <img
+          <Image
             width="16"
             height="16"
             src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"
             alt="expand"
           />
           <p>UNITED STATES (USD $)</p>
-          <img
+          <Image
             width="16"
             height="16"
             src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"
@@ -42,11 +43,13 @@ const Header = () => {
 
           {/* Logo */}
           <a className="flex title-font font-medium mr-50 items-center text-gray-900">
-            <img
-              className="w-45"
-              src="https://habitat-recreation.myshopify.com/cdn/shop/files/logo2x_4ab34736-74d3-4274-b3c0-9f16dfd114ec.png?v=1653466069"
-              alt="Logo"
-            />
+            <Image
+          className="w-50"
+          src="https://habitat-recreation.myshopify.com/cdn/shop/files/logo2x_4ab34736-74d3-4274-b3c0-9f16dfd114ec.png?v=1653466069"
+          alt="Logo"
+          width={180}     // or whatever size suits you
+          height={50}
+        />
           </a>
 
           {/* Icons */}
