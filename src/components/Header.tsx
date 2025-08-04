@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -32,11 +33,11 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap items-center justify-between px-1 py-4">
           {/* Navigation Menu */}
           <nav className="hidden lg:flex flex-wrap text-gray-600 items-center text-base space-x-6">
-            <a className="cursor-pointer hover:text-red-500">Home</a>
-            <a className="cursor-pointer hover:text-red-500">Shop</a>
-            <a className="cursor-pointer hover:text-red-500">News</a>
-            <a className="cursor-pointer hover:text-red-500">About</a>
-            <a className="cursor-pointer hover:text-red-500">Contact</a>
+            <Link href={'/'} className="cursor-pointer hover:text-red-500">Home</Link>
+            <Link href={'/shop'} className="cursor-pointer hover:text-red-500">Shop</Link>
+            <Link href={'/news'} className="cursor-pointer hover:text-red-500">News</Link>
+            <Link href={'/about'} className="cursor-pointer hover:text-red-500">About</Link>
+            <Link href={'/contact'} className="cursor-pointer hover:text-red-500">Contact</Link>
           </nav>
 
           {/* Logo */}
@@ -89,22 +90,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-
-      {/* Image just below the header */}
-      <div className="-mt-2">
-        <img
-          src="/sportive2.jpg"
-          alt="Main Banner"
-          className="w-full h-auto object-cover"
-        />
-      </div>
-      <div className="">
-        <img
-          src="/sportive3.jpg"
-          alt="Main Banner"
-          className="w-full h-auto object-cover"
-        />
-      </div>
     </div>
   );
 };
