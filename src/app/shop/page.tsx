@@ -93,7 +93,7 @@ const page = () => {
             <Image src="https://habitat-recreation.myshopify.com/cdn/shop/products/p21.jpg?v=1648541084&width=1220" alt="Product 5" width={288} height={384} className="w-full h-96 object-cover shadow-md" />
             <div className="mt-3 text-center">
               <p className="text-sm text-gray-500">Timberland</p>
-              <p className="text-sm font-semibold text-gray-800">Men's Supply & Demand Corrupt Cargo Pullover Hoodie</p>
+              <p className="text-sm font-semibold text-gray-800">Men s Supply & Demand Corrupt Cargo Pullover Hoodie</p>
               <p className="text-lg font-bold text-red-600 mt-1">$64.20</p>
             </div>
           </div>
@@ -123,7 +123,7 @@ const page = () => {
             <Image src="https://habitat-recreation.myshopify.com/cdn/shop/products/p22.jpg?v=1648541970&width=1220" alt="Product 8" width={288} height={384} className="w-full h-96 object-cover shadow-md" />
             <div className="mt-3 text-center">
               <p className="text-sm text-gray-500">Nike</p>
-              <p className="text-sm font-semibold text-gray-800">Nike Air Force 1 '07 Crater Casual Shoes</p>
+              <p className="text-sm font-semibold text-gray-800">Nike Air Force 1 07 Crater Casual Shoes</p>
               <p className="text-lg font-bold text-red-600 mt-1">$110.00</p>
             </div>
           </div>
@@ -180,7 +180,7 @@ const page = () => {
       </div>
      <div className="flex justify-center">
       <button className="flex justify-center mb-25 items-center bg-white w-11 h-11 rounded-full border border-gray-200 text-sm hover:bg-gray-100 transition">
-        <img
+        <Image
           width="15"
           height="15"
           src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png"
