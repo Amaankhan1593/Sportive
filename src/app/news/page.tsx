@@ -103,7 +103,7 @@ const page = () => {
                   Unwind this fall with these passive relaxation activities
                 </h1>
                 <p className='mt-2 text-black font-bold text-sm'>
-                  There is no denying that blue, gray and white have taken center stage recently. If you look closely at decorator magazines, you may find that beige and "greige", a combination...
+                  There is no denying that blue, gray and white have taken center stage recently. If you look closely at decorator magazines, you may find that beige and greige, a combination...
                 </p>
               </div>
             </div>
