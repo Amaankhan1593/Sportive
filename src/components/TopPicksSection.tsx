@@ -82,9 +82,11 @@ const TopPicksSection = () => {
           </div>
         </div>
         {/*  */}
-        <button className="rounded-full text-sm font-semibold hover:bg-black hover:text-white shadow border px-5 py-3">
-          SHOP BEST SELLERS
-        </button>
+       <div className="w-full flex justify-center mt-8">
+          <button className="rounded-full text-sm font-semibold hover:bg-black hover:text-white shadow border px-5 py-3">
+            SHOP BEST SELLERS
+          </button>
+        </div>
       {/*  */}
     <div className="relative w-fit">
       <Image
