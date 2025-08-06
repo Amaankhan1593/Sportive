@@ -59,7 +59,7 @@ const page = () => {
                   Workout in the heat: how to train in high temperatures
                 </h1>
                 <p className='mt-2 text-black font-bold text-sm'>
-                  My job is to bring out in people what they wouldn't dare do themselves. Men don't want another man to look at their woman because they don't know how to...
+                  My job is to bring out in people what they wouldn t dare do themselves. Men don t want another man to look at their woman because they don t know how to...
                 </p>
               </div>
             </div>
@@ -122,10 +122,10 @@ const page = () => {
               <div>
                 <p className='mt-8'>March 29 2022</p>
                 <h1 className='mt-4 text-black font-bold text-xl'>
-                  Work out for a cause on International Women’s Day
+                  Work out for a cause on International Women s Day
                 </h1>
                 <p className='mt-2 text-black font-bold text-sm'>
-                  My relationships with producers or photographers - these are relationships that took years. I have my favourite fashion decade, yes, yes, yes: '60s. It was a sort of little revolution;...
+                  My relationships with producers or photographers - these are relationships that took years. I have my favourite fashion decade, yes, yes, yes: 60s. It was a sort of little revolution;...
                 </p>
               </div>
             </div>

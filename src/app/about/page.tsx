@@ -19,8 +19,8 @@ const Page = () => {
         <div className="relative z-10 text-white flex flex-col items-center text-center justify-center h-full">
           <h1 className="text-5xl font-bold mb-4">OUR STORY</h1>
           <p>
-            I believe in comfort. If you don't feel comfortable in your clothes,
-            it's hard to think of <br />
+            I believe in comfort. If you don t feel comfortable in your clothes,
+            it s hard to think of <br />
             anything else. Even Michelangelo got paid for doing.
           </p>
         </div>
@@ -55,11 +55,11 @@ const Page = () => {
             <i>CALIFORNIA</i>
           </h1>
           <p className="mt-4 ml-8 text-gray-700">
-            Sports bowledem yellow card clutch play, she's on fire. Rugby was
+            Sports bowledem yellow card clutch play, she s on fire. Rugby was
             the winner on the day ruck, game of two halves, alley-oop, ball
-            four, take a walk she's on fire. Penalty, he's on fire. Soccer, he's
-            on fire. Red card, lineout, baseball. Striker, scrummage, they're
-            going upstairs. He shoots, he scores. Strike 3, you're out!
+            four, take a walk she s on fire. Penalty, he s on fire. Soccer, he s
+            on fire. Red card, lineout, baseball. Striker, scrummage, they re
+            going upstairs. He shoots, he scores. Strike 3, you re out!
             Baseball, drop goal, corner, trust our processes, rolling maul, slam
             dunk.
           </p>
@@ -165,26 +165,25 @@ const Page = () => {
 
       {/* Map + Feedback Section */}
       <section className="text-gray-600 body-font relative mt-20 h-[700px] w-full">
-  <div className="absolute inset-0 bg-gray-300">
-    <iframe
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      title="map"
-      scrolling="no"
-      marginHeight={0}
-      marginWidth={0}
-      src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-      style={{
-        filter: "grayscale(1) contrast(1.2) opacity(0.4)",
-        width: "100%",
-        height: "100%",
-      }}
-    ></iframe>
-  </div>
-  <div className="container px-5 py-24 mx-auto flex"></div>
-</section>
-
+        <div className="absolute inset-0 bg-gray-300">
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="map"
+            scrolling="no"
+            marginHeight={0}
+            marginWidth={0}
+            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            style={{
+              filter: "grayscale(1) contrast(1.2) opacity(0.4)",
+              width: "100%",
+              height: "100%",
+            }}
+          ></iframe>
+        </div>
+        <div className="container px-5 py-24 mx-auto flex"></div>
+      </section>
     </div>
   );
 };
