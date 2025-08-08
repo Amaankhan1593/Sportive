@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "brand": "Adidas",
+    "name": "Adidas Originals Colorblock Short-Sleeve T-shirt",
+    "price": 45.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p16.jpg?v=1648537134&width=1220"
+  },
+  {
+    "id": 2,
+    "brand": "Adidas",
+    "name": "Boys Infant Jordan Jersey Romper",
+    "price": 30.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p3.jpg?v=1648449638&width=1220"
+  },
+  {
+    "id": 3,
+    "brand": "Nike",
+    "name": "Graphic Light Support Sports Bra",
+    "price": 90.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p5.jpg?v=1648453629&width=1160"
+  },
+  {
+    "id": 4,
+    "brand": "Nike",
+    "name": "Icon Clash Oversized Houndstooth Crop Top",
+    "price": 45.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p15.jpg?v=1648532451&width=1160"
+  },
+  {
+    "id": 5,
+    "brand": "Timberland",
+    "name": "Men's Supply & Demand Corrupt Cargo Pullover Hoodie",
+    "price": 64.20,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p21.jpg?v=1648541084&width=1220"
+  },
+  {
+    "id": 6,
+    "brand": "Adidas",
+    "name": "Mixed Stripe Jersey Polo Shirt",
+    "price": 110.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p24.jpg?v=1649423711&width=1160"
+  },
+  {
+    "id": 7,
+    "brand": "New Balance",
+    "name": "Money Basketball Shoes",
+    "price": 160.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p02.jpg?v=1648449191&width=1160"
+  },
+  {
+    "id": 8,
+    "brand": "Nike",
+    "name": "Nike Air Force 1 07 Crater Casual Shoes",
+    "price": 110.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p22.jpg?v=1648541970&width=1220"
+  },
+  {
+    "id": 9,
+    "brand": "Nike",
+    "name": "Nike Air Max 97 Casual Shoes",
+    "price": 65.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p7.jpg?v=1648457563&width=1160"
+  },
+  {
+    "id": 10,
+    "brand": "Nike",
+    "name": "Nike Air Zoom Pegasus 38 Running Shoes",
+    "price": 120.00,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p13.jpg?v=1648466608&width=1160"
+  },
+  {
+    "id": 11,
+    "brand": "Nike",
+    "name": "Nike Aurora Marbled Cropped Tank",
+    "price": 58.20,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p8.jpg?v=1648460319&width=1220"
+  },
+  {
+    "id": 12,
+    "brand": "Nike",
+    "name": "Nike Sportswear Club T-Shirt",
+    "price": 25.30,
+    "image": "https://habitat-recreation.myshopify.com/cdn/shop/products/p9.jpg?v=1648463255&width=1220"
+  }
+]
