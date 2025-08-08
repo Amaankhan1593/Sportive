@@ -12,7 +12,7 @@ const Page = () => {
 
       {/* Horizontal line with image */}
       <div className="relative my-10 flex flex-col items-center justify-center">
-        <hr className="border-t border-gray-300 w-full mb-2" />
+        <hr className="border-t mt-15 border-gray-300 w-full mb-2" />
       </div>
 
       {/* Filters + Sorting */}
