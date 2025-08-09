@@ -109,22 +109,22 @@ const Page = () => {
         `}</style>
       </div>
 
-      <div className="flex gap-4">
-        <Image
-          src="https://habitat-recreation.myshopify.com/cdn/shop/files/s03.jpg?v=1653296924&width=750"
-          alt="Image 1"
-          width={750}
-          height={200}
-          className="object-cover"
-        />
-        <Image
-          src="https://habitat-recreation.myshopify.com/cdn/shop/files/s04.jpg?v=1653296928&width=750"
-          alt="Image 2"
-          width={750}
-          height={200}
-          className="object-cover object-top"
-        />
-      </div>
+     <div className="flex gap-4">
+  <Image
+    src="https://habitat-recreation.myshopify.com/cdn/shop/files/s03.jpg?v=1653296924&width=750"
+    alt="Image 1"
+    width={630}   // smaller width
+    height={150}  // smaller height
+    className="object-cover ml-10"
+  />
+  <Image
+    src="https://habitat-recreation.myshopify.com/cdn/shop/files/s04.jpg?v=1653296928&width=750"
+    alt="Image 2"
+    width={630}
+    height={150}
+    className="object-cover object-top"
+  />
+</div>
 
       {/* Browse Collections */}
       <div>
