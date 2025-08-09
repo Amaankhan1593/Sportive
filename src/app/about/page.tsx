@@ -109,22 +109,22 @@ const Page = () => {
         `}</style>
       </div>
 
-     <div className="flex gap-4">
-      <Image
-        src="https://habitat-recreation.myshopify.com/cdn/shop/files/s03.jpg?v=1653296924&width=750"
-        alt="Image 1"
-        width={630}   // smaller width
-        height={150}  // smaller height
-        className="object-cover ml-10"
-      />
-      <Image
-        src="https://habitat-recreation.myshopify.com/cdn/shop/files/s04.jpg?v=1653296928&width=750"
-        alt="Image 2"
-        width={630}
-        height={150}
-        className="object-cover object-top"
-      />
-    </div>
+      <div className="flex gap-4">
+        <Image
+          src="https://habitat-recreation.myshopify.com/cdn/shop/files/s03.jpg?v=1653296924&width=750"
+          alt="Image 1"
+          width={630} // smaller width
+          height={150} // smaller height
+          className="object-cover ml-10"
+        />
+        <Image
+          src="https://habitat-recreation.myshopify.com/cdn/shop/files/s04.jpg?v=1653296928&width=750"
+          alt="Image 2"
+          width={630}
+          height={150}
+          className="object-cover object-top"
+        />
+      </div>
 
       {/* Browse Collections */}
       <div>
@@ -139,26 +139,30 @@ const Page = () => {
           <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/collections/sc6.jpg?v=1653298758"
             alt="High-res Banner"
-            width={200}
-            height={330}
+            width={300}
+            height={500}
+            className="w-[300px] h-[350px] object-cover"
           />
           <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/collections/sc1.jpg?v=1653298183"
             alt="Collection 2"
-            width={200}
-            height={320}
+            width={300}
+            height={500}
+            className="w-[300px] h-[350px] object-cover"
           />
           <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/collections/sc2.jpg?v=1653298954"
             alt="Collection 3"
-            width={200}
-            height={320}
+            width={300}
+            height={500}
+            className="w-[300px] h-[350px] object-cover"
           />
           <Image
             src="https://habitat-recreation.myshopify.com/cdn/shop/collections/sc8.jpg?v=1653299194"
             alt="Collection 4"
-            width={200}
-            height={320}
+            width={300}
+            height={500}
+            className="w-[300px] h-[350px] object-cover"
           />
         </div>
       </div>
