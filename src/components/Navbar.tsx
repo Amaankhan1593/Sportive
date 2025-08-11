@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
 
-const Header = () => {
+const Navbar: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const openCart = () => setIsCartOpen(true);
@@ -21,15 +21,15 @@ const Header = () => {
         <div className="flex space-x-2 absolute right-6 text-white items-center">
           <p>ENGLISH</p>
           <Image
-            width="16"
-            height="16"
+            width={16}
+            height={16}
             src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"
             alt="expand"
           />
           <p>UNITED STATES (USD $)</p>
           <Image
-            width="16"
-            height="16"
+            width={16}
+            height={16}
             src="https://img.icons8.com/material-outlined/24/ffffff/expand-arrow--v1.png"
             alt="expand"
           />
@@ -37,26 +37,23 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <header className="text-gray-600 body-font sticky top-0 z-50  bg-white shadow-md w-full">
+      <header className="text-gray-600 body-font sticky top-0 z-50 bg-white shadow-md w-full">
         <div className="container mx-auto flex flex-wrap items-center justify-between px-1 py-7">
           {/* Navigation Menu */}
           <nav className="hidden lg:flex flex-wrap text-gray-600 items-center text-base space-x-6">
-            <Link href={"/"} className="cursor-pointer hover:text-red-500">
+            <Link href="/" className="cursor-pointer hover:text-red-500">
               Home
             </Link>
-            <Link href={"/shop"} className="cursor-pointer hover:text-red-500">
+            <Link href="/shop" className="cursor-pointer hover:text-red-500">
               Shop
             </Link>
-            <Link href={"/news"} className="cursor-pointer hover:text-red-500">
+            <Link href="/news" className="cursor-pointer hover:text-red-500">
               News
             </Link>
-            <Link href={"/about"} className="cursor-pointer hover:text-red-500">
+            <Link href="/about" className="cursor-pointer hover:text-red-500">
               About
             </Link>
-            <Link
-              href={"/contact"}
-              className="cursor-pointer hover:text-red-500"
-            >
+            <Link href="/contact" className="cursor-pointer hover:text-red-500">
               Contact
             </Link>
           </nav>
@@ -67,8 +64,9 @@ const Header = () => {
               className="w-50"
               src="https://habitat-recreation.myshopify.com/cdn/shop/files/logo2x_4ab34736-74d3-4274-b3c0-9f16dfd114ec.png?v=1653466069"
               alt="Logo"
-              width={180} // or whatever size suits you
+              width={180}
               height={50}
+              priority
             />
           </a>
 
@@ -77,12 +75,12 @@ const Header = () => {
             {/* Search */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width={20}
+              height={20}
               viewBox="0 0 20 20"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth={2}
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -92,8 +90,8 @@ const Header = () => {
             {/* User */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width={20}
+              height={20}
               viewBox="0 0 20 21"
               fill="currentColor"
             >
@@ -101,13 +99,11 @@ const Header = () => {
             </svg>
 
             {/* Cart */}
-            <IoCartOutline
-              className="w-6 h-6 cursor-pointer"
-              onClick={openCart}
-            />
+            <IoCartOutline className="w-6 h-6 cursor-pointer" onClick={openCart} />
           </div>
         </div>
       </header>
+
       {/* Cart Drawer */}
       {isCartOpen && (
         <>
@@ -118,21 +114,20 @@ const Header = () => {
           ></div>
 
           {/* Cart */}
-          <div className="fixed top-0 right-0 w-130 h-full bg-white shadow-lg p-4 z-50">
+          <div className="fixed top-0 right-0 w-[520px] h-full bg-white shadow-lg p-4 z-50 overflow-y-auto">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-3xl font-bold">
-                <i>Cart</i>
-              </h2>
+              <h2 className="text-3xl font-bold italic">Cart</h2>
               <button onClick={closeCart} className="px-3 py-1 text-sm">
                 Close
               </button>
             </div>
             <hr className="border-gray-300 mb-4" />
+
             {/* Example cart items */}
             <div className="flex flex-col items-center justify-center h-screen">
               <svg
-                width="100"
-                height="100"
+                width={100}
+                height={100}
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
                 className="-mt-40"
@@ -146,11 +141,11 @@ const Header = () => {
                 Your cart is currently empty.
               </p>
               <div>
-                <a href="/shop">
+                <Link href="/shop">
                   <button className="cursor-pointer rounded-full border px-7 py-3 text-white mt-4 bg-[#E51D1D]">
                     START SHOPPING
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -160,4 +155,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
