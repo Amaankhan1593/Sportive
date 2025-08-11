@@ -1,136 +1,29 @@
-// import Image from "next/image";
-// import products from "@/data/products.json";
-
-// interface Props {
-//   params: { id: string };
-// }
-
-// export default function ProductDetailPage({ params }: Props) {
-//   const productId = Number(params.id);
-//   const product = products.find((p) => p.id === productId);
-
-//   if (!product) {
-//     return <p className="text-center mt-10">Product not found.</p>;
-//   }
-
-//   return (
-//     <section className="text-gray-600 body-font overflow-hidden">
-//       <div className="container px-5 py-24 mx-auto">
-//         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-//           <Image
-//             alt={product.name}
-//             src={product.image}
-//             width={400}
-//             height={400}
-//             className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-//           />
-//           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-//             <h2 className="text-sm title-font text-gray-500 tracking-widest">{product.brand}</h2>
-//             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.name}</h1>
-
-//             <div className="flex mb-4">
-//               <span className="flex items-center">
-//                 {[...Array(4)].map((_, i) => (
-//                   <svg
-//                     key={i}
-//                     fill="currentColor"
-//                     stroke="currentColor"
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth="2"
-//                     className="w-4 h-4 text-indigo-500"
-//                     viewBox="0 0 24 24"
-//                   >
-//                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-//                   </svg>
-//                 ))}
-//                 <svg
-//                   fill="none"
-//                   stroke="currentColor"
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth="2"
-//                   className="w-4 h-4 text-indigo-500"
-//                   viewBox="0 0 24 24"
-//                 >
-//                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-//                 </svg>
-//                 <span className="text-gray-600 ml-3">4 Reviews</span>
-//               </span>
-//             </div>
-
-//             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-//               <div className="flex">
-//                 <span className="mr-3">Color</span>
-//                 <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-//                 <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-//                 <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-//               </div>
-//               <div className="flex ml-6 items-center">
-//                 <span className="mr-3">Size</span>
-//                 <div className="relative">
-//                   <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-//                     <option>SM</option>
-//                     <option>M</option>
-//                     <option>L</option>
-//                     <option>XL</option>
-//                   </select>
-//                   <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-//                     <svg
-//                       fill="none"
-//                       stroke="currentColor"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                       strokeWidth="2"
-//                       className="w-4 h-4"
-//                       viewBox="0 0 24 24"
-//                     >
-//                       <path d="M6 9l6 6 6-6" />
-//                     </svg>
-//                   </span>
-//                 </div>
-//               </div>
-//             </div>
-
-//             <div className="flex">
-//               <span className="title-font font-medium text-2xl text-gray-900">${product.price.toFixed(2)}</span>
-//               <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-//                 Add to Cart
-//               </button>
-//               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-//                 <svg
-//                   fill="currentColor"
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth="2"
-//                   className="w-5 h-5"
-//                   viewBox="0 0 24 24"
-//                 >
-//                   <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-//                 </svg>
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
-import products from "@/data/products.json";
+import products from "../../../data/products.json";
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useCart } from "../../../../context/CartContext";
 
 const ProductDetail = () => {
   const params = useParams();
   const productId = Number(params.id);
+  const [quantity, setQuantity] = useState(1);
   const product = products.find((p) => p.id === productId);
   const { addToCart } = useCart();
 
-  if (!product) return <div>Product not found</div>;
+  const [selectedColor, setSelectedColor] = useState("gray");
+  const [selectedSize, setSelectedSize] = useState("M");
+
+  if (!product)
+    return <div className="text-center mt-10">Product not found</div>;
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -143,30 +36,184 @@ const ProductDetail = () => {
             width={400}
             height={400}
           />
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+
+          <div className="lg:w-1/2 w-full lg:pl-16 lg:py-6 mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               {product.brand}
             </h2>
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+            <h1 className="text-gray-900 text-4xl mt-3 title-font font-medium mb-1">
               {product.name}
             </h1>
-
-            <p className="leading-relaxed mb-4">
-              {/* Description or details here */}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              malesuada justo nec sapien pulvinar, ut lacinia nunc varius.
-            </p>
-
-            <span className="title-font font-medium text-2xl text-gray-900">
+            <span className="title-font font-medium mt-3 text-xl text-red-600">
               ${product.price.toFixed(2)}
             </span>
-            <button
-              onClick={() => addToCart(product, 1)}
-              className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded mt-4"
-            >
-              Add to Cart
-            </button>
+
+            {/* Color selector */}
+            <div className="mb-4">
+              <span className="block mb-1 font-medium mt-10 text-gray-700">
+                Color: Slate gray
+              </span>
+              <div className="flex space-x-2 mt-3 ml-1">
+                {["gray"].map((color) => (
+                  <button
+                    key={color}
+                    onClick={() => setSelectedColor(color)}
+                    className={`border-2 rounded-full w-8 h-8 focus:outline-none ${
+                      color === selectedColor
+                        ? "border-indigo-600"
+                        : "border-gray-300"
+                    }`}
+                    style={{
+                      backgroundColor:
+                        color === "gray"
+                          ? "#9CA3AF"
+                          : color === "black"
+                          ? "#111827"
+                          : "#4F46E5",
+                    }}
+                    aria-label={color}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Size selector */}
+            <div className="mb-6">
+              <span className="block mb-2 text-sm">Size: S</span>
+              <div className="flex space-x-3">
+                {["S", "M", "L"].map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => setSelectedSize(size)}
+                    className={`border rounded-md px-5 py-3 font-semibold focus:outline-none ${
+                      selectedSize === size
+                        ? "bg-black text-white"
+                        : "bg-white text-gray-700 border-gray-300 hover:bg-indigo-100"
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <div className="text-sm underline text-black mb-2">
+                Sizing guide
+              </div>
+
+              {/* Quantity selector and Add to Cart button container */}
+              <div className="flex items-center space-x-4">
+                {/* Quantity selector */}
+                <div className="flex items-center border rounded w-25">
+                  <button
+                    onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                    className="w-10 h-10 flex justify-center items-center text-2xl font-bold  hover:bg-gray-200"
+                    aria-label="Decrease quantity"
+                  >
+                    -
+                  </button>
+
+                  <div className="flex-grow text-center font-semibold text-lg">
+                    {quantity}
+                  </div>
+
+                  <button
+                    onClick={() => setQuantity((q) => q + 1)}
+                    className="w-10 h-10 flex justify-center items-center text-xl font-bold hover:bg-gray-200"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
+
+                {/* Add to Cart Button */}
+                <button
+                  onClick={() => addToCart(product, quantity)}
+                  className="bg-black  w-full rounded-full text-white px-5 py-3"
+                >
+                  Add to Cart
+                </button>
+              </div>
+
+              {/* Buy It Now Button */}
+              <button
+                onClick={() => {
+                  /* Implement buy now action here */
+                }}
+                className="mt-4 w-full bg-red-600 text-white px-6 py-3 rounded-full"
+              >
+                Buy It Now
+              </button>
+
+              {/* Additional text below Buy It Now */}
+              <div className="mt-8 text-gray-700 space-y-3 text-sm">
+                <p>
+                  <strong>Pickup available at 827 North Coronado</strong>
+                </p>
+                <p>Usually ready in 24 hours</p>
+                <p className="underline text-black cursor-pointer">
+                  View store information
+                </p>
+
+                <hr className="my-1 border-gray-300" />
+                <p className="mt-6">
+                  Pulling from the Three Stripes design archive, the Men's
+                  adidas Originals Adicolor Colorblock Short-Sleeve T-Shirt
+                  features a relaxed fit, bold colorblocking and a partial
+                  Trefoil design for a sporty finishing touch.
+                </p>
+
+                <p className="mt-4">
+                  This is a demo store. You can purchase products like this from
+                  Finishline.
+                </p>
+              </div>
+              <hr className="my-1 mt-5 border-gray-300" />
+            </div>
           </div>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="ml-140 -mt-5">
+                MATERIALS
+              </AccordionTrigger>
+              <AccordionContent className="ml-140">
+                Talk about fine lines and great curves. That’s the beauty of the
+                Darcy sofa—made to suit your appreciation for clean,
+                contemporary style. A striking flared frame, comfy pillow top
+                armrests and an ultra-soft upholstery that holds up to everyday
+                living complete this fashion statement.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+                        <hr className="my-1 mt-5 border-gray-300" />
+
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="ml-140 -mt-5">
+                SHIPPING & RETURNS
+              </AccordionTrigger>
+              <AccordionContent className="ml-140">
+                All furniture is thoroughly inspected at several key points in
+                our preparation and delivery process to make sure it's received
+                in good condition. If you have chosen to pick up your order from
+                one of our showrooms, we encourage you to inspect your item
+                before you take possession.{" "}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+              <hr className="my-1 mt-5 border-gray-300" />
+
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="ml-140 -mt-5">
+                CARE GUIDE
+              </AccordionTrigger>
+              <AccordionContent className="ml-140">
+               Regularcare. Use a slightly damp, soft and lint-free cloth for regular dust removal. Always clean in the direction of the grain.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>

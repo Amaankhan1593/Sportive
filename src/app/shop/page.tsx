@@ -102,6 +102,7 @@
 import React from "react";
 import products from "@/data/products.json";
 import Image from "next/image";
+import Link from "next/link";
 import { useCart } from "../../../context/CartContext";
 
 const ShopPage = () => {
@@ -115,27 +116,45 @@ const ShopPage = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="border p-4 rounded shadow hover:shadow-lg transition cursor-pointer"
+            className="p-4 shadow hover:shadow-lg transition"
           >
+            <Link href={`/products/${product.id}`}>
             <Image
               src={product.image}
               alt={product.name}
               width={300}
               height={400}
-              className="object-cover mb-4 rounded"
+              className="object-cover mb-4 rounded cursor-pointer"
             />
-            <p className="text-sm text-gray-500">{product.brand}</p>
-            <h2 className="font-semibold text-lg">{product.name}</h2>
-            <p className="text-red-600 font-bold">${product.price.toFixed(2)}</p>
-            <button
-              onClick={() => addToCart(product, 1)}
-              className="mt-3 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 w-full"
-            >
-              Add to Cart
-            </button>
+          </Link>
+
+            <p className="text-sm text-center text-gray-500">{product.brand}</p>
+            <h2 className="font-semibold text-center text-sm">{product.name}</h2>
+            <p className="text-red-600 text-center font-bold">${product.price.toFixed(2)}</p>
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center gap-5 mt-15">
+          <button className="flex justify-center bg-red-600 text-white items-center w-11 h-11 rounded-full border border-gray-300 text-sm hover:bg-gray-200 transition">
+            1
+          </button>
+          <div className="flex justify-center">
+            <button className="flex justify-center items-center w-11 h-11 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-200 transition">
+              2
+            </button>
+          </div>
+          <div className="flex justify-center">
+            <button className="flex justify-center mb-15 items-center bg-white w-11 h-11 rounded-full border border-gray-200 text-sm hover:bg-gray-100 transition">
+              <Image
+                width="15"
+                height="15"
+                src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png"
+                alt="long-arrow-right"
+              />
+            </button>
+          </div>
+        </div>
     </div>
   );
 };
