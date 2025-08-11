@@ -106,7 +106,7 @@ import Link from "next/link";
 import { useCart } from "../../../context/CartContext";
 
 const ShopPage = () => {
-  const { addToCart } = useCart();
+  const {} = useCart();
 
   return (
     <div className="container mx-auto px-4 py-12">

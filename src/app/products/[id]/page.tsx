@@ -158,7 +158,7 @@ const ProductDetail = () => {
 
                 <hr className="my-1 border-gray-300" />
                 <p className="mt-6">
-                  Pulling from the Three Stripes design archive, the Men's
+                  Pulling from the Three Stripes design archive, the Men s
                   adidas Originals Adicolor Colorblock Short-Sleeve T-Shirt
                   features a relaxed fit, bold colorblocking and a partial
                   Trefoil design for a sporty finishing touch.
@@ -178,7 +178,7 @@ const ProductDetail = () => {
                 MATERIALS
               </AccordionTrigger>
               <AccordionContent className="ml-140">
-                Talk about fine lines and great curves. That’s the beauty of the
+                Talk about fine lines and great curves. That s the beauty of the
                 Darcy sofa—made to suit your appreciation for clean,
                 contemporary style. A striking flared frame, comfy pillow top
                 armrests and an ultra-soft upholstery that holds up to everyday
@@ -195,7 +195,7 @@ const ProductDetail = () => {
               </AccordionTrigger>
               <AccordionContent className="ml-140">
                 All furniture is thoroughly inspected at several key points in
-                our preparation and delivery process to make sure it's received
+                our preparation and delivery process to make sure its received
                 in good condition. If you have chosen to pick up your order from
                 one of our showrooms, we encourage you to inspect your item
                 before you take possession.{" "}
