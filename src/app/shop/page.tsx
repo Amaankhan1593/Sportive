@@ -44,9 +44,110 @@ const ShopPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl mb-10 font-bold text-center">Products</h1>
+      <h1 className="text-6xl mb-30 mt-10 font-bold text-center">
+        <i>Products</i>
+      </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <hr className="border-t-1 border-gray-300 my-4"></hr>
+      <div className="flex items-center gap-6">
+        <h1 className="text-gray-500 text-sm">Filter:</h1>
+
+        <div className="flex justify-between items-center w-full">
+          {/* Left side - Filter options */}
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Availability</span>
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Price</span>
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Color</span>
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Brand</span>
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Right side - Sorting & Product Count */}
+          <div className="flex items-center gap-4">
+            <div className="flex text-sm items-center gap-1 cursor-pointer">
+              <span>Alphabetically, A-Z</span>
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <span className="text-gray-500">24 products</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 mt-5 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -54,6 +155,17 @@ const ShopPage = () => {
             addToCart={addToCart}
           />
         ))}
+      </div>
+      <div className="flex justify-center items-center mt-20">
+        <button className="flex bg-red-600 text-white justify-center items-center w-12 h-12 rounded-full border">
+          1
+        </button>
+        <button className="flex justify-center items-center ml-2 w-12 h-12 rounded-full border">
+          2
+        </button>
+        <button className="flex justify-center items-center ml-2 w-12 h-12 rounded-full border">
+          -+
+        </button>
       </div>
     </div>
   );

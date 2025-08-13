@@ -192,14 +192,47 @@ const Navbar: React.FC = () => {
                   <p className="font-bold text-lg">
                     Total: $
                     {cartItems
-                      .reduce((acc, item) => acc + item.price * item.quantity, 0)
+                      .reduce(
+                        (acc, item) => acc + item.price * item.quantity,
+                        0
+                      )
                       .toFixed(2)}
                   </p>
                   <button
                     onClick={clearCart}
-                    className="bg-red-600 text-white px-4 py-2 rounded"
+                    className="bg-red-600 ml-32 text-white px-4 py-2 rounded"
                   >
                     Clear Cart
+                  </button>
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      try {
+                        const res = await fetch("/api/checkout", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            currency: "usd",
+                            items: cartItems.map((item) => ({
+                              id: item.id,
+                              name: item.name,
+                              price: item.price,
+                              quantity: item.quantity,
+                              image: item.image,
+                            })),
+                          }),
+                        });
+
+                        const data = await res.json();
+                        if (data?.url) window.location.href = data.url;
+                        else alert(data?.error || "Unable to start checkout");
+                      } catch (err) {
+                        alert("Something went wrong starting checkout");
+                      }
+                    }}
+                    className="bg-red-600 ml-10 text-white px-4 py-2 rounded"
+                  >
+                    Buy It Now
                   </button>
                 </div>
               </div>
