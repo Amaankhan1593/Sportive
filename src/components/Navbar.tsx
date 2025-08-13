@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
                         alert("Something went wrong starting checkout");
                       }
                     }}
-                    className="bg-red-600 ml-10 text-white px-4 py-2 rounded"
+                    className="bg-red-600  text-white px-4 py-2 rounded"
                   >
                     Buy It Now
                   </button>
