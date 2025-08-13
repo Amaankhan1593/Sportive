@@ -10,7 +10,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 interface CheckoutItem {
   id?: string | number;
   name: string;
-  price: number; // price in major currency unit (e.g., 45.00 for $45)
+  price: number;
   quantity?: number;
   image?: string;
 }
