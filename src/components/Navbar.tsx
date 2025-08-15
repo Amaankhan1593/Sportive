@@ -200,7 +200,7 @@ const Navbar: React.FC = () => {
                   </p>
                   <button
                     onClick={clearCart}
-                    className="bg-red-600 ml-32 text-white px-4 py-2 rounded"
+                    className="bg-red-600 ml-32 cursor-pointer text-white px-4 py-2 rounded"
                   >
                     Clear Cart
                   </button>
@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
                         alert("Something went wrong starting checkout");
                       }
                     }}
-                    className="bg-red-600  text-white px-4 py-2 rounded"
+                    className="bg-red-600 cursor-pointer  text-white px-4 py-2 rounded"
                   >
                     Buy It Now
                   </button>
