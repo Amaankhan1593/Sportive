@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error("Missing STRIPE_SECRET_KEY in environment variables");
-}
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+export const runtime = "nodejs";
 
 interface CheckoutItem {
   id?: string | number;
@@ -29,9 +25,19 @@ function absoluteUrl(req: NextRequest, path: string) {
 
 export async function POST(req: NextRequest) {
   try {
+    const secret = process.env.STRIPE_SECRET_KEY;
+    if (!secret) {
+      console.error("STRIPE_SECRET_KEY missing at runtime");
+      return NextResponse.json(
+        { error: "Server misconfigured. Missing STRIPE_SECRET_KEY." },
+        { status: 500 }
+      );
+    }
+
+    const stripe = new Stripe(secret);
+
     const { items, currency = "usd" } = (await req.json()) as CheckoutRequest;
 
-    // Validate input
     if (!Array.isArray(items) || items.length === 0) {
       return NextResponse.json({ error: "No items provided" }, { status: 400 });
     }
@@ -40,10 +46,10 @@ export async function POST(req: NextRequest) {
       quantity: Math.max(1, Number(it.quantity ?? 1)),
       price_data: {
         currency: currency.toLowerCase(),
-        unit_amount: Math.round(it.price * 100), // Convert to smallest currency unit
+        unit_amount: Math.round(Number(it.price) * 100),
         product_data: {
-          name: it.name || "Item",
-          images: it.image ? [it.image] : [],
+          name: String(it.name ?? "Item"),
+          images: it.image ? [String(it.image)] : [],
           metadata: it.id ? { id: String(it.id) } : undefined,
         },
       },
@@ -60,9 +66,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ url: session.url }, { status: 201 });
   } catch (e) {
     const message = e instanceof Error ? e.message : "Checkout error";
+    console.error("Checkout error:", e);
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
+
 // import { NextRequest, NextResponse } from "next/server";
 // import Stripe from "stripe";
 
