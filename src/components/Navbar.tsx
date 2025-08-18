@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Navbar */}
-      <header className="text-gray-600 body-font sticky top-0 z-50 bg-white shadow-md w-full">
+      <header className="text-gray-600 body-font sticky top-0 z-50 bg-white shadow-lg w-full">
         <div className="container mx-auto flex flex-wrap items-center justify-between px-1 py-7">
           {/* Navigation Menu */}
           <nav className="hidden lg:flex flex-wrap text-gray-600 items-center text-base space-x-6">
@@ -92,6 +92,7 @@ const Navbar: React.FC = () => {
             </svg>
 
             {/* User */}
+          <Link href="/login">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={20}
@@ -102,6 +103,7 @@ const Navbar: React.FC = () => {
             >
               <path d="M9.3486 1C15.5436 1 15.5436 10.4387 9.3486 10.4387C3.15362 10.4387 3.15362 1 9.3486 1ZM1 19.9202C1.6647 9.36485 17.4579 9.31167 18.0694 19.9468L17.0857 20C16.5539 10.6145 2.56869 10.6411 2.01034 19.9734L1.02659 19.9202H1ZM9.3486 2.01034C4.45643 2.01034 4.45643 9.42836 9.3486 9.42836C14.2408 9.42836 14.2408 2.01034 9.3486 2.01034Z" />
             </svg>
+          </Link> 
 
             {/* Cart Icon */}
             <div className="relative">
