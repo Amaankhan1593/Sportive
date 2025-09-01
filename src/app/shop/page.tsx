@@ -13,10 +13,10 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
-    setQuantity(1);
-  };
+  // const handleAddToCart = () => {
+  //   addToCart(product, quantity);
+  //   setQuantity(1);
+  // };
 
   return (
     <div className="p-4 shadow hover:shadow-lg transition">

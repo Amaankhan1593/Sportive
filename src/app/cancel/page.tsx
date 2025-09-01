@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
+import Link from "next/link";
 
 /* FallingXs component unchanged */
 const FallingXs = ({ count = 12 }) => {
@@ -74,10 +75,10 @@ export default function Page() {
   }, []);
 
   // motion variants
-  const container = {
-    hidden: { opacity: 0, y: 12 },
-    show: { opacity: 1, y: 0, transition: { stiffness: 120, type: "spring", damping: 14 } },
-  };
+  // const container = {
+  //   hidden: { opacity: 0, y: 12 },
+  //   show: { opacity: 1, y: 0, transition: { stiffness: 120, type: "spring", damping: 14 } },
+  // };
 
   function handleRetry() {
     setUndoText("Retrying...");
@@ -134,7 +135,7 @@ export default function Page() {
         </h1>
 
         <p className="mt-3 text-gray-600 text-base md:text-lg">
-          No worries — your cart is still intact. When you're ready, you can try again or return to your cart.
+          No worries — your cart is still intact. When you re ready, you can try again or return to your cart.
         </p>
 
         {/* Buttons */}
@@ -176,9 +177,9 @@ export default function Page() {
               Contact support
             </a>{" "}
             • or{" "}
-            <a href="/" className="underline font-medium">
+            <Link href="/" className="underline font-medium">
               continue shopping
-            </a>
+            </Link>
           </p>
         </div>
 

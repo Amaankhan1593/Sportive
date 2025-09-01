@@ -486,7 +486,7 @@ const Navbar: React.FC = () => {
                         const data = await res.json();
                         if (data?.url) window.location.href = data.url;
                         else alert(data?.error || "Unable to start checkout");
-                      } catch (err) {
+                      } catch{
                         alert("Something went wrong starting checkout");
                       }
                     }}
