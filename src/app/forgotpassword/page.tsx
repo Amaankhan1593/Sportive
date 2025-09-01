@@ -30,9 +30,10 @@ const page = () => {
               SUBMIT
             </button>
 
-            <p className="cursor-pointe text-center text-sm font-semibold underline decoration-offset-4 hover:text-red-500">
+            <Link href={'/login'}><p className="cursor-pointer text-center text-sm font-semibold underline decoration-offset-4 hover:text-red-500">
               Cancel
             </p>
+            </Link>
           </form>
         </div>
       </section>
